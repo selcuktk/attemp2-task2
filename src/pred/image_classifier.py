@@ -1,5 +1,6 @@
 from pred.models.torch_pred import *
 from pred.models.tf_pred import *
+from pred.models.is_pred import *
 from typing import Any
 
 
