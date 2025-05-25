@@ -55,3 +55,16 @@ async def predict_tf(request: Img):
         )
 
     return prediction
+
+@app.post("/predict/internship/", status_code=200)
+async def predict_internship(request: Img):
+    prediction = internship_run_classifier(request.img_url)
+    if not prediction:
+        # the exception is raised, not returned - you will get a validation
+        # error otherwise.
+        raise HTTPException(
+            status_code=404, detail="Image could not be downloaded"
+
+        )
+
+    return prediction
