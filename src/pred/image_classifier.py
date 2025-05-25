@@ -1,5 +1,5 @@
-from src.pred.models.torch_pred import *
-from src.pred.models.tf_pred import *
+from pred.models.torch_pred import *
+from pred.models.tf_pred import *
 from typing import Any
 
 

@@ -1,4 +1,4 @@
-from src.utils.utilities import *
+from utils.utilities import *
 import os
 import tensorflow as tf
 import tensorflow_hub as hub

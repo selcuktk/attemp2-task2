@@ -1,7 +1,7 @@
 import torch
 from torchvision import models
 from torchvision import transforms
-from src.utils.utilities import *
+from utils.utilities import *
 import os
 
 SAVE_LOCATION = os.getcwd() + "/resources/"
