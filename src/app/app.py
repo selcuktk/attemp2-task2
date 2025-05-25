@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException
 from pred.image_classifier import *
 from fastapi.middleware.cors import CORSMiddleware
 from schemas.image_schema import Img
+from fastapi.responses import JSONResponse
 
 app = FastAPI(title="Image Classifier API")
 
@@ -67,4 +68,4 @@ async def predict_internship(request: Img):
 
         )
 
-    return prediction
+    return JSONResponse(content=prediction)
