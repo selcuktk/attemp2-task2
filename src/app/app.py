@@ -27,36 +27,6 @@ async def read_main():
     return {"msg": "Hello World !!!!"}
 
 
-
-@app.post("/predict/torch_model/", status_code=200)
-async def predict_torch(request: Img):
-    prediction = torch_run_classifier(request.img_url)
-    if not prediction:
-        # the exception is raised, not returned - you will get a validation
-        # error otherwise.
-        raise HTTPException(
-            status_code=404, detail="Image could not be downloaded"
-
-        )
-
-    return {"status_code": 200,
-            "predicted_label": prediction[0],
-            "probability": prediction[1]}
-
-
-@app.post("/predict/tf/", status_code=200)
-async def predict_tf(request: Img):
-    prediction = tf_run_classifier(request.img_url)
-    if not prediction:
-        # the exception is raised, not returned - you will get a validation
-        # error otherwise.
-        raise HTTPException(
-            status_code=404, detail="Image could not be downloaded"
-
-        )
-
-    return prediction
-
 @app.post("/predict/internship/", status_code=200)
 async def predict_internship(request: Img):
     prediction = internship_run_classifier(request.img_url)
