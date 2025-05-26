@@ -1,4 +1,4 @@
-FROM python:3-buster
+FROM python:3.8.0-buster
 RUN pip install --upgrade pip
 WORKDIR /code
 RUN pip install Pillow
