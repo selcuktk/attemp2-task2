@@ -1,6 +1,6 @@
 from utils.utilities import *
 import os
-from keras.models import load_model
+from tensorflow.keras.models import load_model
 import numpy as np
 
 SAVE_LOCATION = os.getcwd() + "/resources/"
