@@ -18,8 +18,10 @@ def dir_check(dir_location):
 
 def load_image(img_url):
     try:
-        img = Image.open(requests.get(img_url, stream=True).raw)
-        return img
+        response = requests.get(img_url, stream=True, headers={"User-Agent": "Mozilla/5.0"})
+        if response.status_code == 200:
+            return Image.open(response.raw)
+        print(f"Error: {response.status_code}")
     except Exception as e:
-        print(e)
-        print("image could not be opened")
+        print(f"Error: {e}")
+    return None
