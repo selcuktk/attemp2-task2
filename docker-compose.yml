@@ -4,6 +4,6 @@ services:
     container_name: mycontainer
     build: .
     ports:
-      - "8000:8000"
+      - "7001:7001"
     volumes:
       - .:/src/
