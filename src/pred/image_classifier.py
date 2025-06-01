@@ -1,7 +1,6 @@
 from pred.models.is_pred import *
 from typing import Any
 
-# is: internship
 def internship_run_classifier(image: str) -> Any:
     img = load_image(image)  # loading image
     if img is None:

@@ -6,12 +6,7 @@ from fastapi.responses import JSONResponse
 
 app = FastAPI(title="Image Classifier API")
 
-origins = [
-    "http://localhost:3000",
-    "localhost:3000",
-    "*",
-    "http://127.0.0.1:8089/",
-]
+origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,
@@ -20,11 +15,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"]
 )
-
-
-@app.get("/")
-async def read_main():
-    return {"msg": "Hello World !!!!"}
 
 
 @app.post("/predict/internship/", status_code=200)
