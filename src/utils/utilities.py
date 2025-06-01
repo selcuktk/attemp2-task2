@@ -2,9 +2,6 @@ from PIL import Image
 import os
 import requests
 
-current_dir = os.getcwd()
-os.chdir(current_dir + "/../")
-
 
 def load_image(img_url):
     try:
