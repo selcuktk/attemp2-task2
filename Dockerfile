@@ -2,7 +2,6 @@ FROM python:3.8.0-buster
 RUN pip install --upgrade pip
 WORKDIR /code
 ENV PYTHONPATH=/code/src
-RUN pip install Pillow
 COPY ./requirements.txt /code/requirements.txt
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 COPY ./src ./src/
