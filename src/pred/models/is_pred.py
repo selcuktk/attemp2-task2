@@ -1,4 +1,4 @@
-from utils.utilities import *
+from utils import load_image
 import os
 from tensorflow.keras.models import load_model
 import numpy as np

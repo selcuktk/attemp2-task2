@@ -1,8 +1,9 @@
 from fastapi import FastAPI, HTTPException
-from pred.image_classifier import *
 from fastapi.middleware.cors import CORSMiddleware
-from schemas.image_schema import Img
 from fastapi.responses import JSONResponse
+
+from pred import internship_run_classifier
+from schemas import Img
 
 app = FastAPI(title="Image Classifier API")
 

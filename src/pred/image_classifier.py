@@ -1,4 +1,5 @@
-from pred.models.is_pred import *
+from pred.models import is_preprocess, is_predict
+from utils import load_image
 from typing import Any
 
 def internship_run_classifier(image: str) -> Any:
