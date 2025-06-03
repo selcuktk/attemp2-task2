@@ -1,15 +1,15 @@
 # Build your Backend using FastAPI
 
 ## Pre-requisites
-* Python (3.6+)
+* Python (3.8)
 
 ## Tutorial
 :pushpin: [A 4 Step Tutorial to Serve an ML Model in Production using FastAPI](https://medium.com/@ashmi_banerjee/4-step-tutorial-to-serve-an-ml-model-in-production-using-fastapi-ee62201b3db3)
 ## Running the Code
 
 1. Clone the project
-   * `git clone git@github.com:ashmibanerjee/fastapi-backend.git`
-   * `cd fastapi-backend`
+   * `git clone https://github.com/selcuktk/attemp2-task2.git`
+   * `cd attemp2-task2`
 2. Create virtual environment
    * `virtualenv venv`
    * `source venv/bin/activate`
